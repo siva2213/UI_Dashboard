@@ -17,7 +17,6 @@ class DonutChart extends Component {
     var width = 260;
     var height = 260;
     var thickness = 40;
-    var duration = 750;
 
     var radius = Math.min(width, height) / 2;
     var color = d3.scaleOrdinal(d3.schemeCategory10);
@@ -45,8 +44,7 @@ class DonutChart extends Component {
       })
       .sort(null);
 
-    var path = g
-      .selectAll("path")
+    g.selectAll("path")
       .data(pie(data))
       .enter()
       .append("g")

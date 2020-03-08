@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import { Route, withRouter } from "react-router-dom";
+import { Route, withRouter, Switch } from "react-router-dom";
 import SideNav from "./components/Navs/sideNav";
 import TopNav from "./components/Navs/topNav";
 import Dashboard from "./components/Dashboard";
@@ -9,6 +9,11 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {};
+  }
+  componentDidMount() {
+    if (this.props.location.pathname === "/") {
+      this.props.history.push("/dashboard");
+    }
   }
   render() {
     return (
@@ -24,7 +29,7 @@ class App extends Component {
             <nav aria-label="breadcrumb">
               <ol className="breadcrumb">
                 <li className="breadcrumb-item">
-                  <a href="#">ZIRCOS</a>
+                  <a href="/dashboard">ZIRCOS</a>
                 </li>
                 <li className="breadcrumb-item">
                   <a href={this.props && this.props.location.pathname}>
@@ -38,11 +43,14 @@ class App extends Component {
                 </li>
               </ol>
             </nav>
-            <Route path="/dashboard" name="DASHBOARD" component={Dashboard} />
-            <Route path="/userInterface" name="USER INTERFACE" />
-            <Route path="/adminUi" name="ADMIN UI" />
-            <Route path="/calendar" name="CALENDAR" />
-            <Route path="/email" name="EMAIL" />
+            <Switch>
+              <Route path="/dashboard" name="DASHBOARD" component={Dashboard} />
+              <Route path="/userInterface" name="USER INTERFACE" />
+              <Route path="/adminUi" name="ADMIN UI" />
+              <Route path="/calendar" name="CALENDAR" />
+              <Route path="/email" name="EMAIL" />
+              <Route path="*" name="DASHBOARD" component={Dashboard} />
+            </Switch>
           </div>
         </div>
       </div>
