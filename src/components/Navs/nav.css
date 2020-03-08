@@ -1,0 +1,45 @@
+.side_nav_container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.side_nav_item {
+  text-align: left;
+  padding: 1rem;
+}
+
+.side_nav_item_link {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  justify-content: flex-start;
+  color: #95a3aa;
+}
+
+.side_nav_item_link:hover {
+  color: white;
+}
+
+.brand_styling {
+  font-size: 1.5rem;
+  padding: 1rem 1rem 3rem 1rem;
+  text-align: center;
+}
+
+.top_nav_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.top_nav_container_list {
+  display: flex;
+  flex-direction: row;
+}
+
+.top_nav_container_item {
+  padding: 1.5rem;
+  align-self: center;
+}

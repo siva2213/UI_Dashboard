@@ -1,10 +1,39 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.left_container {
+  min-height: 100vh;
+  background-color: #37414e;
+  flex: 1.5;
+}
+.right_container {
+  flex: 9.5;
+}
+
+.right_container_body {
+  min-height: calc(100% - 72px);
+  background-color: #f8f8f8;
+  padding: 1rem;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.breadcrumb {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0.75rem 1rem;
+  /* margin-bottom: 1rem; */
+  justify-content: flex-end;
+  list-style: none;
+  background: none !important;
+  /* border-radius: .25rem; */
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -35,4 +64,14 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.card {
+  width: 100%;
+  background-color: white;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 8px !important;
+  box-shadow: 0 1px 15px 1px rgba(62, 57, 107, 0.07) !important;
+  border: none !important;
 }

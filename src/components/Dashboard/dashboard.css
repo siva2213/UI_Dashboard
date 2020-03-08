@@ -1,0 +1,44 @@
+.metric_container {
+  display: flex;
+  flex-direction: row;
+}
+.metric_item {
+  display: flex;
+  flex-direction: row;
+}
+.metric_description {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.metric_icon {
+  padding-top: 1rem;
+  flex: 1;
+}
+
+.metric_content_label {
+  font-size: 12px;
+}
+
+.metric_content_value {
+  font-weight: bold;
+}
+
+.metric_content_lastUpdate {
+  font-size: 12px;
+}
+
+.table_container {
+  display: flex;
+  flex-direction: row;
+}
+.charts_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.chartsD3 {
+  flex: 2;
+}

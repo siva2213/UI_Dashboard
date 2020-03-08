@@ -1,0 +1,14 @@
+.avatar-sm-box {
+  margin-top: 1rem !important;
+  height: 35px !important;
+  width: 35px !important;
+  background: green !important;
+  color: white !important;
+  display: block !important;
+  line-height: 8px !important;
+  text-align: center !important;
+  border-radius: 50% !important;
+  font-size: 16px !important;
+  /* border: 1px solid black; */
+  /* padding-top: 1rem; */
+}
